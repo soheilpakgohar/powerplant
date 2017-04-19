@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>نیروگاه چهار واحدی ایسین</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/font-awesome.css">
+        <link rel="stylesheet" href="./css/style.build.css">
+        <link rel="stylesheet" href="./css/style.css">
+
+        <script src="./src/js/renderer.js"></script>
+        
+    </head>
+    <body>
+        
+        <div id="app">
+            <nav class="navbar navbar-fixed-top" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainnav">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <router-link class="navbar-brand" to="/"><i class="fa fa-home fa-fw"></i>نیروگاه ایسین
+                        </router-link>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="mainnav">
+                        <ul class="nav navbar-nav">
+                            <li v-cloak>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">سوخت <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><router-link to="/fuel">سوخت</router-link></li>
+                                    <li><router-link to="/fuel/existfuelcalc">محاسب موجودی سوخت</router-link></li>
+                                </ul>
+                            </li>
+                            <li v-cloak>
+                                <router-link to="/statics">گزارش تولید</router-link>
+                            </li>
+                            <li v-cloak>
+                                <router-link to="/staticshistory">مشاهده سوابق</router-link>
+                            <!--</li>-->
+                            <!--<li>-->
+                                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">بیشتر <b class="caret"></b></a>-->
+                                <!--<ul class="dropdown-menu">-->
+                                    <!--<li><a href="#">Action</a></li>-->
+                                    <!--<li><a href="#">Another action</a></li>-->
+                                    <!--<li><a href="#">Something else here</a></li>-->
+                                    <!--<li><a href="#">Separated link</a></li>-->
+                                <!--</ul>-->
+                            <!--</li>-->
+                        </ul>
+                        <form class="navbar-form navbar-right">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input type="text" class="form-control calendar" id="calendar" placeholder="تاریخ"
+                                           title="تاریخ امروز">
+                                </div>
+                            </div>
+                        </form>
+
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </nav>
+            <div class="gap"></div>
+            <div class="gap"></div>
+
+
+                <router-view></router-view>
+
+        </div>
+
+        <script src="./js/build.js"></script>
+        <script>
+            $(document).ready(() => {
+                $('.calendar').pDatepicker({
+                    format: 'DD-MM-YY',
+                    monthPicker: {
+                        scrollEnabled: false
+                    },
+                    dayPicker: {
+                        scrollEnabled: false
+                    },
+                    navigator: {
+                        text: {
+                            btnNextText: ">",
+                            btnPrevText: "<",
+                        }
+                    }
+                });
+            });
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,58 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'iransanse';
+  src: url("../fonts/IRANSansWeb.eot?#") format("eot"), url("../fonts/IRANSansWeb.woff2") format("woff2"), url("../fonts/IRANSansWeb.woff") format("woff");
+  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: normal; }
+
+@font-face {
+  font-family: 'iransanse';
+  src: url("../fonts/IRANSansWeb_Bold.eot?#") format("eot"), url("../fonts/IRANSansWeb_Bold.woff2") format("woff2"), url("../fonts/IRANSansWeb_Bold.woff") format("woff");
+  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: bold; }
+
+@font-face {
+  font-family: 'iransanse';
+  src: url("../fonts/IRANSansWeb_UltraLight.eot?#") format("eot"), url("../fonts/IRANSansWeb_Light.woff2") format("woff2"), url("../fonts/IRANSansWeb_Light.woff") format("woff");
+  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: 100; }
+
+
+
+body {
+    direction: rtl;
+    font-family: iransanse;
+    cursor: default;
+    
+}
+.navbar , .dropdown-menu {
+    background-color: #34495e;
+    color: #ecf0f1;
+    border-radius: 0;
+    border-bottom: 3px solid #f1c40f;
+}
+nav a {
+    color: #ecf0f1 !important;
+}
+nav a:hover {
+    background-color: #3498db !important;
+    
+}
+nav ul a:focus {
+    color: #34495e !important;
+}
+.gap {
+    height: 30px;
+}
+.table tr th , .table tr td {
+    padding: 5px;
+}
+
+#analitic {
+    direction: ltr;
+}
+
+
+#analitic tr th {
+    text-align: center;
+}
